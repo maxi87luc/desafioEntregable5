@@ -1,0 +1,36 @@
+<%- include('./head.ejs') %>
+
+<h1>Productos</h1>
+
+<% if (productos) {%> 
+<table class="table">
+    
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Thumbnail</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+           
+            <% productos.forEach((producto)=>{ %> 
+                <tr>
+                    <th scope="row"><%-producto.id%></th>
+                    <td><%-producto.title%></td>
+                    <td><%-producto.price%></td>
+                    <td><img src="<%-producto.thumbnail%>" style="width: 30px" alt="">  </td>
+                </tr>
+            <% })%>
+        </tbody>
+        
+    </table>
+
+    
+<%} else {%>
+    <h2>No hay productos</h2>
+
+<% }%>
+
+    <a href="../../" class="btn btn-primary mx-auto w-25">Ingresar Producto</a>

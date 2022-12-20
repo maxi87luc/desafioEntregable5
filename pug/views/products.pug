@@ -1,0 +1,31 @@
+extends main.pug
+
+block products 
+
+    h1 Productos
+
+    if productos.length>0 
+        table(class='table')
+            thead 
+                tr 
+                    th(scope='col') #
+                    th(scope='col') Title
+                    th(scope='col') Price
+                    th(scope='col') Thumbnail
+            tbody(id='body')
+                each product in productos
+                    tr 
+                        th(scope='row')=product.id
+                        td()=product.title
+                        td()=product.price
+                        td
+                            img(src=product.thumbnail, style='width: 30px', alt='')
+    else 
+        h2 No hay productos
+    
+    div
+        a(href='../../', class='btn btn-primary mx-auto w-25', to='/api/productos' ) "Ingresar Productos"
+    
+
+
+

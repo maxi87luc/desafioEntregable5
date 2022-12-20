@@ -1,0 +1,40 @@
+<%- include('./head.ejs') %>
+
+
+<body>
+    <center>
+        <h2 >Ingrese Producto</h2>
+    </center>
+    
+    <form action="/api/productos" class="container" method="POST">
+        <div class="row">
+            Title: <input type="text" name="title">
+        </div>
+        <div class="row">
+            Price: <input type="text" name="price">
+        </div>
+        <div class="row">
+            Thumbnail: <input type="text" name="thumbnail">
+        </div>
+        <div class="row mt-5" >
+            <button class="btn btn-primary mx-auto w-25" type="submit">Enviar</button>
+        </div>
+    
+        
+        
+        
+    </form>
+    <div class="row mt-5" >
+            <a href="./api/productos" class="btn btn-primary mx-auto w-25" to="/api/productos">Productos</a>
+    </div>
+
+</div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    
+</body>
+</html>
+ <div >   
+ 

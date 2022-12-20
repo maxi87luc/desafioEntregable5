@@ -1,0 +1,34 @@
+<h1>Productos</h1>
+
+{{#if productos}} 
+<table class="table">
+    
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Thumbnail</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+           
+            {{#each productos}}
+                <tr>
+                    <th scope="row">{{id}}</th>
+                    <td>{{title}}</td>
+                    <td>{{price}}</td>
+                    <td><img src="{{thumbnail}}" style="width: 30px" alt="">  </td>
+                </tr>
+            {{/each}}
+        </tbody>
+        
+    </table>
+
+    
+{{else}}
+    <h2>No hay productos</h2>
+
+{{/if}}
+
+    <a href="../../" class="btn btn-primary mx-auto w-25">Ingresar Producto</a>

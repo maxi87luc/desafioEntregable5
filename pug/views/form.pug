@@ -1,0 +1,24 @@
+extends main.pug 
+
+block form
+    div
+        center 
+            h2="Ingrese Producto"
+        
+        form(action='/api/productos', class='container', method='POST')
+            div(class='row')
+                label="Title"
+                input(type='text', name='title')
+            div(class='row')
+                label="Price"
+                input(type='number', name='price')
+            div(class='row')
+                label="Thumbnail"
+                input(type='text', name='thumbnail')
+            
+            div(class='row mt-5')
+                button(class='btn btn-primary mx-auto w-25', type='submit') Enviar
+        div
+            a(href='./api/productos', class='btn btn-primary mx-auto w-25', to='/api/productos' ) "Productos"
+    
+
